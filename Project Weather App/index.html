@@ -11,10 +11,39 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Weather Forecast</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6 current-city-temp">
+            <h1>Melbourne</h1>
+            <ul>
+              <li>Wednesday 4th May, 17:56</li>
+              <li>Showers</li>
+              <li>Humidity: 30%</li>
+              <li>Wind: 3.6km/h</li>
+            </ul>
+          </div>
+          <div class="col-6 current-temp-icon" id="current-temp-icon">
+            <h1>🌧</h1>
+            <h3>Currently 22°C</h3>
+            <button class="btn btn-secondary" id="celsius-btn">°C</button>
+            <button class="btn btn-secondary" id="farenheit-btn">°F</button>
+          </div>
+        </div>
+      </div>
+      <small
+        ><a
+          href="https://github.com/BeckMassloch/weather-app"
+          target="_blank"
+          id=""
+          >Open-source code</a
+        >
+        by Beck Massloch</small
+      >
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
