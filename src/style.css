@@ -15,9 +15,6 @@ h3 {
 
 ul {
   color: #4d4c48;
-}
-
-ul {
   list-style-type: none;
   padding: 0;
 }
@@ -45,4 +42,8 @@ footer {
 .cloud-icon {
   font-size: 48px;
   padding-top: 10px;
+}
+
+#weather-description:first-letter {
+  text-transform: capitalize;
 }

@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -27,24 +28,24 @@
         <div class="card-body">
           <div class="row">
             <div class="col-7 current-city-info">
-              <h1>Melbourne</h1>
+              <h1 id="city"></h1>
               <ul>
-                <li>Wednesday 4th May, 17:56</li>
-                <li>Showers</li>
-                <li>Humidity: 30%</li>
-                <li>Wind: 3.6km/h</li>
+                <li id="current-date"></li>
+                <li id="weather-description"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
             <div class="col-5 current-temp">
               <i class="fa-solid fa-cloud cloud-icon"></i>
-              <h3>Currently 22°C</h3>
+              <h3>Currently <span id="temperature">22</span>°C</h3>
               <button class="btn btn-secondary" id="celsius-btn">°C</button>
               <button class="btn btn-secondary" id="farenheit-btn">°F</button>
             </div>
 
             <footer>
               <hr />
-              <small id="coded-by"
+              <small
                 ><a
                   href="https://github.com/BeckMassloch/weather-app"
                   target="_blank"
