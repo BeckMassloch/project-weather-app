@@ -1,0 +1,48 @@
+h1,
+h3 {
+  color: #212121;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+ul {
+  color: #4d4c48;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  font-family: "Fredoka", sans-serif;
+  margin-top: 20px;
+}
+
+.card-body {
+  border: 1px solid;
+  border-color: #fe77a3;
+  border-radius: 5px;
+}
+
+.current-temp {
+  text-align: center;
+}
+
+.cloud-icon {
+  font-size: 48px;
+  padding-top: 10px;
+}

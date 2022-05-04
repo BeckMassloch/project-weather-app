@@ -10,39 +10,53 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/0c0eafb209.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-6 current-city-temp">
-            <h1>Melbourne</h1>
-            <ul>
-              <li>Wednesday 4th May, 17:56</li>
-              <li>Showers</li>
-              <li>Humidity: 30%</li>
-              <li>Wind: 3.6km/h</li>
-            </ul>
-          </div>
-          <div class="col-6 current-temp-icon" id="current-temp-icon">
-            <h1>🌧</h1>
-            <h3>Currently 22°C</h3>
-            <button class="btn btn-secondary" id="celsius-btn">°C</button>
-            <button class="btn btn-secondary" id="farenheit-btn">°F</button>
+      <div class="weather-app">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-7 current-city-info">
+              <h1>Melbourne</h1>
+              <ul>
+                <li>Wednesday 4th May, 17:56</li>
+                <li>Showers</li>
+                <li>Humidity: 30%</li>
+                <li>Wind: 3.6km/h</li>
+              </ul>
+            </div>
+            <div class="col-5 current-temp">
+              <i class="fa-solid fa-cloud cloud-icon"></i>
+              <h3>Currently 22°C</h3>
+              <button class="btn btn-secondary" id="celsius-btn">°C</button>
+              <button class="btn btn-secondary" id="farenheit-btn">°F</button>
+            </div>
+
+            <footer>
+              <hr />
+              <small id="coded-by"
+                ><a
+                  href="https://github.com/BeckMassloch/weather-app"
+                  target="_blank"
+                  id=""
+                  >Open-source code</a
+                >
+                by Beck Massloch</small
+              >
+            </footer>
           </div>
         </div>
       </div>
-      <small
-        ><a
-          href="https://github.com/BeckMassloch/weather-app"
-          target="_blank"
-          id=""
-          >Open-source code</a
-        >
-        by Beck Massloch</small
-      >
     </div>
     <script src="src/app.js"></script>
   </body>
