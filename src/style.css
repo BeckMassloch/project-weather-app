@@ -46,3 +46,9 @@ footer {
 #weather-description:first-letter {
   text-transform: capitalize;
 }
+
+#search-btn,
+#current-location-btn {
+  display: block;
+  width: 100%;
+}

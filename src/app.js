@@ -17,6 +17,34 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-city");
+  let city = cityInput.value;
+  searchCity(cityInput.value);
+}
+
+function searchCity(city) {
+  let apiKey = "3153a29ca3b931fcc59027a2462c1744";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "3153a29ca3b931fcc59027a2462c1744";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 function displayDate() {
   let now = new Date();
   let weekdays = [
@@ -42,10 +70,12 @@ function displayDate() {
   dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 }
 
-let apiKey = "3153a29ca3b931fcc59027a2462c1744";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=berlin&units=${units}&appid=${apiKey}`;
+let cityForm = document.querySelector("#search-form");
+cityForm.addEventListener("submit", handleSubmit);
+
+let currentLocationBtn = document.querySelector("#current-location-btn");
+currentLocationBtn.addEventListener("click", getCurrentPosition);
 
 displayDate();
 
-axios.get(apiUrl).then(displayTemperature);
+searchCity("Berlin");
