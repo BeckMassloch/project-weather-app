@@ -70,6 +70,10 @@ function displayFarenheitTemperature(event) {
   temperatureElement.innerHTML = `${Math.round(farenheitTemperature)}°F`;
 }
 
+function displayCelsiusTemperature(event) {
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+}
+
 let temperatureElement = document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#weather-description");
@@ -87,6 +91,9 @@ let celsiusTemperature = null;
 
 let farenheitElement = document.querySelector("#farenheit-btn");
 farenheitElement.addEventListener("click", displayFarenheitTemperature);
+
+let celsiusElement = document.querySelector("#celsius-btn");
+celsiusElement.addEventListener("click", displayCelsiusTemperature);
 
 displayDate();
 
