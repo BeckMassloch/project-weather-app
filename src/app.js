@@ -31,7 +31,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function showPosition(position) {
+function displayPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
@@ -42,7 +42,7 @@ function showPosition(position) {
 }
 
 function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(showPosition);
+  navigator.geolocation.getCurrentPosition(displayPosition);
 }
 
 function displayDate() {

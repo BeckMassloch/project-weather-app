@@ -23,7 +23,7 @@ footer {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
   font-family: "Fredoka", sans-serif;
   margin-top: 20px;
 }
@@ -31,7 +31,8 @@ footer {
 .card-body {
   border: 1px solid;
   border-color: #fe77a3;
-  border-radius: 5px;
+  border-radius: 20px;
+  background: #ffe7ef;
 }
 
 .current-temp {
