@@ -18,14 +18,11 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 18px;
 }
 
 footer {
   text-align: center;
-}
-
-img {
-  width: 100px;
 }
 
 .container {
@@ -51,17 +48,40 @@ img {
   text-align: center;
 }
 
-.cloud-icon {
-  font-size: 48px;
-  padding-top: 10px;
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-date,
+.weather-forecast-temperature-high {
+  color: #212121;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.weather-forecast-temperatures {
+  font-size: 16px;
+}
+.weather-forecast-temperature-low {
+  color: #4d4c48;
 }
 
 #weather-description:first-letter {
   text-transform: capitalize;
 }
 
+#icon {
+  width: 100px;
+}
 #search-btn,
 #current-location-btn {
   display: block;
   width: 100%;
+}
+
+#forecast-icon {
+  width: 50px;
 }
