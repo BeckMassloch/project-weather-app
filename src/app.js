@@ -74,6 +74,31 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+                  <div class="weather-forecast-date">${day}</div>
+                  <img src="images/icons/50n.png" alt="" id="forecast-icon" />
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-high">18° </span
+                    ><span class="weather-forecast-temperature-low">5°</span>
+                  </div>
+                </div>
+                
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let temperatureElement = document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#weather-description");
@@ -96,5 +121,7 @@ let celsiusElement = document.querySelector("#celsius-btn");
 celsiusElement.addEventListener("click", displayCelsiusTemperature);
 
 displayDate();
+
+displayForecast();
 
 searchCity("Berlin");
