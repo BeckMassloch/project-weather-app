@@ -74,15 +74,6 @@ function displayDate() {
   dateElement.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 }
 
-function displayFarenheitTemperature(event) {
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = `${Math.round(farenheitTemperature)}°F`;
-}
-
-function displayCelsiusTemperature(event) {
-  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-}
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -140,14 +131,6 @@ cityForm.addEventListener("submit", handleSubmit);
 
 let currentLocationBtn = document.querySelector("#current-location-btn");
 currentLocationBtn.addEventListener("click", getCurrentPosition);
-
-let celsiusTemperature = null;
-
-let farenheitElement = document.querySelector("#farenheit-btn");
-farenheitElement.addEventListener("click", displayFarenheitTemperature);
-
-let celsiusElement = document.querySelector("#celsius-btn");
-celsiusElement.addEventListener("click", displayCelsiusTemperature);
 
 displayDate();
 
